@@ -1,6 +1,6 @@
 {
   "name": "license-guard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Validate dependency licenses against a policy file (.licenserc.json).",
   "type": "module",
   "bin": {
