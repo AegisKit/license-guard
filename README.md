@@ -43,13 +43,13 @@ yarn add -D @kaito_takemoto/license-guard
 
 ```bash
 # テーブル出力（デフォルト）
-npx @kaito_takemoto/license-guard --cwd .
+npx license-guard --cwd .
 
 # JSON 出力
-npx @kaito_takemoto/license-guard --cwd . --format json
+npx license-guard --cwd . --format json
 ```
 
-違反（deny / non-allow）が 1 つでもあれば **exit code = 1** で終了します。
+違反（deny）が 1 つでもあれば **exit code = 1** で終了します。
 
 ---
 
@@ -100,7 +100,7 @@ npx @kaito_takemoto/license-guard --cwd . --format json
 ## 🧰 CLI
 
 ```bash
-npx @kaito_takemoto/license-guard [options]
+npx license-guard [options]
 ```
 
 **Options**
@@ -152,7 +152,7 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - run: npx @kaito_takemoto/license-guard --cwd . --format table
+      - run: npx license-guard --cwd . --format table
 ```
 
 **npm scripts**
