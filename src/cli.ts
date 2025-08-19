@@ -34,7 +34,7 @@ cli.version("0.1.0");
     const { output, totals } = renderReport(items, fmt);
     console.log(output);
 
-    if (totals.deny > 0 || totals.nonAllow > 0) process.exit(1);
+    if (totals.deny > 0) process.exit(1);
     process.exit(0);
   } catch (err) {
     console.error((err as Error).message);
