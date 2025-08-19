@@ -1,10 +1,10 @@
 {
   "name": "@kaito_takemoto/license-guard",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Validate dependency licenses against a policy file (.licenserc.json).",
   "type": "module",
   "bin": {
-    "YOUR_CLI_NAME": "dist/cli.js"
+    "license-guard": "dist/cli.js"
   },
   "files": [
     "dist",
@@ -15,7 +15,8 @@
     "dev": "tsx src/cli.ts",
     "build": "tsc -p .",
     "start": "node dist/cli.js",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "postinstall": "node dist/postinstall.js"
   },
   "keywords": [
     "license",
