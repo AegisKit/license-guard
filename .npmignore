@@ -1,0 +1,8 @@
+# Exclude dev files
+src/
+tsconfig.json
+*.tsbuildinfo
+.gitignore
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
