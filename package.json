@@ -29,12 +29,12 @@
   "author": "Kaito Takemoto",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_GH_USER/YOUR_REPO.git"
+    "url": "git+https://github.com/AegisKit/license-guard.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_GH_USER/YOUR_REPO/issues"
+    "url": "https://github.com/AegisKit/license-guard/issues"
   },
-  "homepage": "https://github.com/YOUR_GH_USER/YOUR_REPO#readme",
+  "homepage": "https://github.com/AegisKit/license-guard#readme",
   "engines": {
     "node": ">=18.0.0"
   },
