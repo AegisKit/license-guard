@@ -1,29 +1,54 @@
 {
   "name": "license-guard",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Validate dependency licenses against a policy file (.licenserc.json).",
+  "type": "module",
+  "bin": {
+    "YOUR_CLI_NAME": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "tsx src/cli.ts",
-    "dev-windows": "tsx src/cli.ts",
     "build": "tsc -p .",
-    "start": "node dist/cli.js"
+    "start": "node dist/cli.js",
+    "prepare": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^24.3.0",
-    "tsx": "^4.20.4",
-    "typescript": "^5.9.2",
-    "zod": "^4.0.17"
+  "keywords": [
+    "license",
+    "spdx",
+    "cli",
+    "compliance",
+    "oss"
+  ],
+  "license": "MIT",
+  "author": "Kaito Takemoto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GH_USER/YOUR_REPO.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GH_USER/YOUR_REPO/issues"
+  },
+  "homepage": "https://github.com/YOUR_GH_USER/YOUR_REPO#readme",
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "cac": "^6.7.14",
-    "fast-glob": "^3.3.3",
-    "picomatch": "^4.0.3"
+    "fast-glob": "^3.3.2",
+    "picomatch": "^4.0.2",
+    "zod": "^3.23.8"
   },
-  "bin": {
-    "license-check": "dist/cli.js"
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.7.4"
   },
-  "type": "module"
+  "publishConfig": {
+    "access": "public"
+  }
 }

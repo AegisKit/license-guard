@@ -1,6 +1,26 @@
 # license-guard
 
-[![npm version](https://img.shields.io/npm/v/license-guard.svg)](https://www.npmjs.com/package/license-guard)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Validate dependency licenses against `.licenserc.json`.
 
-設定ファイルに基づいて依存関係のライセンスを検証する CLI ツール。
+```bash
+npx license-guard --config .licenserc.json --cwd . --format table
+```
+
+---
+
+# 4) 事前セルフテスト
+
+```bash
+# 依存解決
+npm ci
+
+# ビルド
+npm run build
+
+# ローカル実行（dist）
+node dist/cli.js --cwd . --format table
+
+# npm link でコマンド名の動作確認（任意）
+npm link
+license-guard --cwd . --format json
+```

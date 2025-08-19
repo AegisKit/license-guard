@@ -28,7 +28,6 @@ export function renderReport(rows: LicenseRow[], format: Format) {
     };
   }
 
-  // table
   const headers = ["package", "version", "license", "status"];
   const colWidths = [
     Math.max(...[...rows.map((r) => r.name.length), headers[0].length], 10),
@@ -46,9 +45,8 @@ export function renderReport(rows: LicenseRow[], format: Format) {
   const lines: string[] = [];
   lines.push(line(headers));
   lines.push(colWidths.map((w) => "-".repeat(w)).join("  "));
-  for (const r of rows) {
+  for (const r of rows)
     lines.push(line([r.name, r.version, r.license ?? "N/A", r.status]));
-  }
   lines.push("");
   lines.push(
     `Totals: ${totals.total} (ok=${totals.ok}, non-allow=${totals.nonAllow}, deny=${totals.deny})`
